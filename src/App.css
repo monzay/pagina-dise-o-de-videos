@@ -1,0 +1,473 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+.app{
+    width: 100%;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+}
+header{
+  font-family: 'Outfit', sans-serif;
+    width: 100%;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter:  blur(10px);
+    position: fixed;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    padding: 300px 0px;
+    z-index: 50;
+  }
+.header-logo{
+    font-size: 100px;
+
+}
+.moverlogo{
+  animation: 1s moverlogo forwards;
+}
+
+@keyframes  moverlogo {
+ 
+  100%{
+    position: absolute;
+    transform:  translateX(-200px);
+  }
+}
+.header-enlace{
+  text-decoration: none;
+  color: white;
+}
+.header-enlace:hover{
+  transition: 0.2s;
+  color:  rgb(150, 255, 12);
+}
+ul{
+  display: flex;
+  list-style: none;
+  margin-left: 100px;
+}
+li{
+  width: 100px;
+}
+.mostrar-item-header-1 {
+  opacity: 0;
+  animation: 1s mostrarItemHeader1 forwards; /* Primero se especifica la animación */
+  animation-delay: 1s; /* Luego se especifica el retraso */
+}
+.item{
+   margin: 0px 1px;
+   padding:  5px 6px;
+   border-radius: 2px;
+  transition: 5s;
+}
+.item:hover{
+  border-bottom: 1px solid white;
+}
+@keyframes mostrarItemHeader1 {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mostrar-item-header-2 {
+  opacity: 0;
+  animation: 1s mostrarItemHeader2 forwards; /* Primero se especifica la animación */
+  animation-delay: 1.5s; /* Luego se especifica el retraso */
+}
+
+@keyframes mostrarItemHeader2 {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.portada{
+    display: flex;
+    padding: 0px 20px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+.portada-btn-contactar{
+
+}
+.portada-title{
+    padding-top: 60px;
+    font-size: 130px;
+    font-family: 'Anton', sans-serif;
+    color:  rgb(255, 255, 255);
+    position: relative;
+    z-index: -100;
+    opacity: 0;
+}
+.mostrar-title{
+  animation: 1s mostrarTitle forwards;
+
+}
+@keyframes mostrarTitle {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.portada-title-2{
+    font-size: 120px;
+    font-family: 'Anton', sans-serif;
+    color:  rgb(150, 255, 12);
+    opacity: 0;
+}
+.mostrar-title-2{
+  animation: 1s mostrarTitle2 forwards;
+}
+@keyframes mostrarTitle2  {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.seccion-portada-img2{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  z-index: -50;
+  right: 0;
+  top: -80px;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+}
+.seccion-informacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:  100%;
+    font-family: 'Outfit', sans-serif;
+    
+}
+.foto-mia{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: rotate(260deg);
+  margin: 40px 0px;
+
+}
+.contenedor-informacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.informacion{
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+    width: 320px;
+    height: 200px;
+    opacity: 0;
+    margin: 9px 0px;
+    
+}
+.informacion-title{
+    font-size: 26px;
+}
+.informacion-informacion{
+    font-size: 20px;
+}
+
+.contenedor-reseñas{
+    width:  100%;
+    height: 200px;
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    margin: 100px 0px;
+    opacity: 0;
+}
+.reseña{
+    min-width: 300px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 0px 1px;
+    border-radius:8px;    
+    padding: 10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+.contenedor-img-nombre{
+    display: flex;
+    align-items: center;
+}
+.reseña-foto{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.reseña-nombre{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.reseña-reseña{
+  padding-top: 10px ;
+}
+
+
+
+
+
+
+
+
+
+button {
+    width: 140px;
+    height: 56px;
+    overflow: hidden;
+    border: none;
+    color: #ffffff;
+    background: none;
+    position: relative;
+    padding-bottom: 2em;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  button > div,
+  button > svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background: currentColor;
+    transition: transform 0.25s ease-out;
+  }
+  
+  button:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  button .clone > *,
+  button .text > * {
+    opacity: 1;
+    font-size: 1.3rem;
+    transition: 0.2s;
+    margin-left: 4px;
+  }
+  
+  button .clone > * {
+    transform: translateY(60px);
+  }
+  
+  button:hover .clone > * {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+  
+  button:hover .text > * {
+    opacity: 1;
+    transform: translateY(-60px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+  
+  button:hover .clone > :nth-child(1) {
+    transition-delay: 0.15s;
+  }
+  
+  button:hover .clone > :nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  button:hover .clone > :nth-child(3) {
+    transition-delay: 0.25s;
+  }
+  
+  button:hover .clone > :nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  /* icon style and hover */
+  button svg {
+    width: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-50deg);
+    transition: 0.2s ease-out;
+  }
+  
+  button:hover svg {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+footer{
+  width: 100%;
+  height: 130px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  font-family: 'Outfit', sans-serif;
+}
+.footer-informacion{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.footer-informacion-contenedor{
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.contenedor-h1{
+  font-size: 20px;
+}
+
+
+
+.social-links,.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  background: white;
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.social-btn svg {
+  height: 24px;
+  width: 24px;
+}
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.social-btn:hover {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: 80px;
+}
+
+#twitter svg {
+  fill: #1da1f2;
+}
+
+#linkedin svg {
+  fill: #0e76a8;
+}
+
+#github {
+  fill: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:600px)  {
+    .app{
+        background-color: rebeccapurple;
+    }
+}
+
+
+
+/*animacion true*/
+.mostrar-informacion{
+  animation:  1s mostrarInformacion forwards;
+}
+
+@keyframes mostrarInformacion {
+  0%{
+    opacity: 0;
+    transform:  translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+  }
+}
